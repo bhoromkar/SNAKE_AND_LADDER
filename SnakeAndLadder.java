@@ -49,7 +49,13 @@ public class SnakeAndLadder {
         }
 
         public static void main (String[]args){
-            
+            SnakeAndLadder sn = new SnakeAndLadder();
+            int player1 = sn.count;
+            int player2 =sn.count;
+            System.out.println(player1);
+            System.out.println(player2);
+            //int player1  = sn.diceRoll();
+           // System.out.println(player1);
         }
     }
 
