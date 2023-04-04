@@ -1,6 +1,6 @@
 package com.bridgelabz.snakeandladder;
 
-public class SnakeAndLadder {
+public class PlayerTwo {
     static int position = 0;
     static int diceValue;
     static int diceMovement;
@@ -10,9 +10,9 @@ public class SnakeAndLadder {
     //static int previousDicePosition;
 
 
-   static final int FINAL_DICE_POSITION =100;
+    static final int FINAL_DICE_POSITION =100;
 
-    static int diceRoll() {
+    static int diceRoll1() {
 
 
         while (dicePosition < FINAL_DICE_POSITION ) {
@@ -21,8 +21,8 @@ public class SnakeAndLadder {
             double value = (Math.random() * 10 % 6);
             diceValue = (int) value;
             //System.out.println(diceValue);
-          //  System.out.println(diceMovement);
-           // previousDicePosition = dicePosition;
+            //System.out.println(diceMovement);
+            // previousDicePosition = dicePosition;
             switch (diceMovement) {
                 case 1:
                    // System.out.println("Player Move Forward");
@@ -38,26 +38,14 @@ public class SnakeAndLadder {
 
                     break;
                 default:
-                    //System.out.println("No Play");
+                   // System.out.println("No Play");
 
             }
-                count++;
-                //System.out.println("Position of dice is: " + dicePosition);
+            count++;
+            //System.out.println("Position of dice is: " + dicePosition);
         }
 
-            System.out.println(count + " times dice roll.");
+        System.out.println(count + " times dice roll.");
 return count;
-        }
-
-        public static void main (String[]args) {
-           SnakeAndLadder sn = new SnakeAndLadder();
-            int player1 =  sn.diceRoll();
-            PlayerTwo sn1 = new PlayerTwo();
-           // sn1.diceRoll1();
-            int player2 = PlayerTwo.diceRoll1();
-            if(player1>player2){
-                System.out.println("player two win");
-            }else{
-                System.out.println("player one win");
-            }
-        }}
+    }
+}
